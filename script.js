@@ -11,20 +11,20 @@ console based Rock, Paper, Scissors Game.
 9. else quit and come back next time.
 */
 
-let userChoice = prompt("Enter a move: ");
-console.log("you played: " + userChoice.toLowerCase());
+const userChoice = prompt("Enter a move: ").toLowerCase();
+console.log("you played: " + userChoice);
 console.log("Computer played: " + getComputerChoice());
-playRound();
+playRound(userChoice, getComputerChoice());
 
 function getComputerChoice() {
-  let choices = ["rock", "paper", "scissors"];
-  let choicesIndex = Math.floor(Math.random() * choices.length);
+  const choices = ["rock", "paper", "scissors"];
+  const choicesIndex = Math.floor(Math.random() * choices.length);
   //   console.log(choices[choicesIndex]);
   return choices[choicesIndex];
 }
 
 function playRound(userSelection, computerSelection) {
-  if (userSelection === computerSelection) {
+  if (userSelection == computerSelection) {
     console.log("It's a tie!");
   } else if (userSelection == "rock" && computerSelection == "scissors") {
     console.log("You win! Rock smashes paper.");
@@ -38,13 +38,8 @@ function playRound(userSelection, computerSelection) {
     console.log("You lose! Paper covers rock.");
   } else if (userSelection == "paper" && computerSelection == "scissors") {
     console.log("You lose! Scissors dices paper.");
+  } else {
+    console.log("something is wrong");
   }
+  console.log(userChoice + ", " + getComputerChoice());
 }
-
-// function game() {
-//   playRound();
-//   playRound();
-//   playRound();
-//   playRound();
-//   playRound();
-// }
