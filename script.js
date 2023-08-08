@@ -46,7 +46,8 @@ function playRound(userSelection, computerSelection) {
   //   console.log(userChoice + ", " + getComputerChoice());
 }
 
-for (let i = 0; i < 4; i++) {
-  let userChoice = prompt("Enter a move: ").toLowerCase();
-  playRound(userChoice, getComputerChoice());
-}
+playRound(userChoice, getComputerChoice());
+playRound(userChoice, getComputerChoice());
+playRound(userChoice, getComputerChoice());
+playRound(userChoice, getComputerChoice());
+playRound(userChoice, getComputerChoice());
