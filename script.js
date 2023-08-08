@@ -11,10 +11,20 @@ console based Rock, Paper, Scissors Game.
 9. else quit and come back next time.
 */
 
-// let userChoice = prompt("Enter a move: ");
+let userChoice = prompt("Enter a move: ");
+console.log("you played: " + userChoice.toLowerCase());
+
 function getComputerChoice() {
-  let choices = ["Rock", "Paper", "Scissors"];
+  let choices = ["rock", "paper", "scissors"];
   let choicesIndex = Math.floor(Math.random() * choices.length);
+  return choices[choicesIndex];
   console.log(choices[choicesIndex]);
 }
-getComputerChoice();
+
+console.log("Computer played: " + getComputerChoice());
+
+function playRound(userSelection, computerSelection) {
+  var userSelection = userChoice;
+  var computerSelection = getComputerChoice;
+  console.log(playRound(userSelection, computerSelection));
+}
