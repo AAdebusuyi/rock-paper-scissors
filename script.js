@@ -13,26 +13,38 @@ console based Rock, Paper, Scissors Game.
 
 let userChoice = prompt("Enter a move: ");
 console.log("you played: " + userChoice.toLowerCase());
+console.log("Computer played: " + getComputerChoice());
+playRound();
 
 function getComputerChoice() {
   let choices = ["rock", "paper", "scissors"];
   let choicesIndex = Math.floor(Math.random() * choices.length);
+  //   console.log(choices[choicesIndex]);
   return choices[choicesIndex];
-  console.log(choices[choicesIndex]);
 }
-
-console.log("Computer played: " + getComputerChoice());
 
 function playRound(userSelection, computerSelection) {
-  var userSelection = userChoice;
-  var computerSelection = getComputerChoice;
-  console.log(playRound(userSelection, computerSelection));
+  if (userSelection === computerSelection) {
+    console.log("It's a tie!");
+  } else if (userSelection == "rock" && computerSelection == "scissors") {
+    console.log("You win! Rock smashes paper.");
+  } else if (userSelection == "paper" && computerSelection == "rock") {
+    console.log("You win! Paper covers rock.");
+  } else if (userSelection == "scissors" && computerSelection == "paper") {
+    console.log("You win! Scissors dices paper.");
+  } else if (userSelection == "scissors" && computerSelection == "rock") {
+    console.log("You lose! Rock smashes paper.");
+  } else if (userSelection == "rock" && computerSelection == "paper") {
+    console.log("You lose! Paper covers rock.");
+  } else if (userSelection == "paper" && computerSelection == "scissors") {
+    console.log("You lose! Scissors dices paper.");
+  }
 }
 
-function game() {
-  playRound();
-  playRound();
-  playRound();
-  playRound();
-  playRound();
-}
+// function game() {
+//   playRound();
+//   playRound();
+//   playRound();
+//   playRound();
+//   playRound();
+// }
