@@ -12,14 +12,15 @@ console based Rock, Paper, Scissors Game.
 */
 
 let userChoice = prompt("Enter a move: ").toLowerCase();
-console.log("you played: " + userChoice);
 
 function getComputerChoice() {
   let choices = ["rock", "paper", "scissors"];
   let choicesIndex = Math.floor(Math.random() * choices.length);
   //   console.log(choices[choicesIndex]);
   //   console.log("Computer played: " + getComputerChoice());
-  //   console.log("Computer played: " + choices[choicesIndex]);
+  console.log("you played: " + userChoice);
+
+  console.log("Computer played: " + choices[choicesIndex]);
 
   return choices[choicesIndex];
 }
@@ -34,7 +35,7 @@ function playRound(userSelection, computerSelection) {
   } else if (userSelection == "scissors" && computerSelection == "paper") {
     console.log("You win! Scissors dices paper.");
   } else if (userSelection == "scissors" && computerSelection == "rock") {
-    console.log("You lose! Rock smashes paper.");
+    console.log("You lose! Rock smashes scissors.");
   } else if (userSelection == "rock" && computerSelection == "paper") {
     console.log("You lose! Paper covers rock.");
   } else if (userSelection == "paper" && computerSelection == "scissors") {
