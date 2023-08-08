@@ -28,3 +28,11 @@ function playRound(userSelection, computerSelection) {
   var computerSelection = getComputerChoice;
   console.log(playRound(userSelection, computerSelection));
 }
+
+function game() {
+  playRound();
+  playRound();
+  playRound();
+  playRound();
+  playRound();
+}
