@@ -19,7 +19,7 @@ function getComputerChoice() {
   let choicesIndex = Math.floor(Math.random() * choices.length);
   //   console.log(choices[choicesIndex]);
   //   console.log("Computer played: " + getComputerChoice());
-  console.log("Computer played: " + choices[choicesIndex]);
+  //   console.log("Computer played: " + choices[choicesIndex]);
 
   return choices[choicesIndex];
 }
@@ -42,7 +42,7 @@ function playRound(userSelection, computerSelection) {
   } else {
     console.log("something is wrong");
   }
-  console.log(userChoice + ", " + getComputerChoice());
+  //   console.log(userChoice + ", " + getComputerChoice());
 }
 
 playRound(userChoice, getComputerChoice());
