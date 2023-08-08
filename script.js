@@ -11,7 +11,7 @@ console based Rock, Paper, Scissors Game.
 9. else quit and come back next time.
 */
 
-const userChoice = prompt("Enter a move: ").toLowerCase();
+let userChoice = prompt("Enter a move: ").toLowerCase();
 console.log("you played: " + userChoice);
 
 function getComputerChoice() {
