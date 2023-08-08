@@ -20,7 +20,7 @@ console based Rock, Paper, Scissors Game.
 let myScore = 0;
 let computerScore = 0;
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 10; i++) {
   let userChoice = prompt("Enter a move: ").toLowerCase();
   console.log("you played: " + userChoice);
   playRound(userChoice, getComputerChoice());
