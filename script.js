@@ -13,13 +13,14 @@ console based Rock, Paper, Scissors Game.
 
 const userChoice = prompt("Enter a move: ").toLowerCase();
 console.log("you played: " + userChoice);
-console.log("Computer played: " + getComputerChoice());
-playRound(userChoice, getComputerChoice());
 
 function getComputerChoice() {
-  const choices = ["rock", "paper", "scissors"];
-  const choicesIndex = Math.floor(Math.random() * choices.length);
+  let choices = ["rock", "paper", "scissors"];
+  let choicesIndex = Math.floor(Math.random() * choices.length);
   //   console.log(choices[choicesIndex]);
+  //   console.log("Computer played: " + getComputerChoice());
+  console.log("Computer played: " + choices[choicesIndex]);
+
   return choices[choicesIndex];
 }
 
@@ -43,3 +44,5 @@ function playRound(userSelection, computerSelection) {
   }
   console.log(userChoice + ", " + getComputerChoice());
 }
+
+playRound(userChoice, getComputerChoice());
