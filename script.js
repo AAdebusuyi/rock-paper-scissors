@@ -11,14 +11,24 @@ console based Rock, Paper, Scissors Game.
 9. else quit and come back next time.
 */
 
-let userChoice = prompt("Enter a move: ").toLowerCase();
+//original version
+// let userChoice = prompt("Enter a move: ").toLowerCase();
+// console.log("you played: " + userChoice);
+// playRound(userChoice, getComputerChoice());
+
+//newer version
+for (let i = 0; i < 5; i++) {
+  let userChoice = prompt("Enter a move: ").toLowerCase();
+  console.log("you played: " + userChoice);
+  playRound(userChoice, getComputerChoice());
+}
 
 function getComputerChoice() {
   let choices = ["rock", "paper", "scissors"];
   let choicesIndex = Math.floor(Math.random() * choices.length);
   //   console.log(choices[choicesIndex]);
   //   console.log("Computer played: " + getComputerChoice());
-  console.log("you played: " + userChoice);
+  //   console.log("you played: " + userChoice);
 
   console.log("Computer played: " + choices[choicesIndex]);
 
@@ -29,7 +39,7 @@ function playRound(userSelection, computerSelection) {
   if (userSelection == computerSelection) {
     console.log("It's a tie!");
   } else if (userSelection == "rock" && computerSelection == "scissors") {
-    console.log("You win! Rock smashes paper.");
+    console.log("You win! Rock smashes scissors.");
   } else if (userSelection == "paper" && computerSelection == "rock") {
     console.log("You win! Paper covers rock.");
   } else if (userSelection == "scissors" && computerSelection == "paper") {
@@ -45,9 +55,3 @@ function playRound(userSelection, computerSelection) {
   }
   //   console.log(userChoice + ", " + getComputerChoice());
 }
-
-playRound(userChoice, getComputerChoice());
-playRound(userChoice, getComputerChoice());
-playRound(userChoice, getComputerChoice());
-playRound(userChoice, getComputerChoice());
-playRound(userChoice, getComputerChoice());
