@@ -46,3 +46,7 @@ function playRound(userSelection, computerSelection) {
 }
 
 playRound(userChoice, getComputerChoice());
+playRound(userChoice, getComputerChoice());
+playRound(userChoice, getComputerChoice());
+playRound(userChoice, getComputerChoice());
+playRound(userChoice, getComputerChoice());
