@@ -1,25 +1,7 @@
-/* 
-console based Rock, Paper, Scissors Game.
-1. Enter a move.
-2. get computer's move.
-3. if we play same move, it's a draw.
-4. else compare moves.
-5. Rock beats sccisors.
-6. Scissors beats paper.
-7. Paper beats rock.
-8. include option to play another round.
-9. else quit and come back next time.
-*/
-
-//original version
-// let userChoice = prompt("Enter a move: ").toLowerCase();
-// console.log("you played: " + userChoice);
-// playRound(userChoice, getComputerChoice());
-
-//newer version
 let myScore = 0;
 let computerScore = 0;
 
+//loop for ten rounds in the game
 for (let i = 0; i < 10; i++) {
   let userChoice = prompt("Enter a move: ").toLowerCase();
   console.log("you played: " + userChoice);
@@ -28,18 +10,15 @@ for (let i = 0; i < 10; i++) {
   console.log("Computer scored: " + computerScore);
 }
 
+// function to get computer choice
 function getComputerChoice() {
   let choices = ["rock", "paper", "scissors"];
   let choicesIndex = Math.floor(Math.random() * choices.length);
-  //   console.log(choices[choicesIndex]);
-  //   console.log("Computer played: " + getComputerChoice());
-  //   console.log("you played: " + userChoice);
-
   console.log("Computer played: " + choices[choicesIndex]);
-
   return choices[choicesIndex];
 }
 
+// function to compare user selection against computer selection
 function playRound(userSelection, computerSelection) {
   if (userSelection == computerSelection) {
     console.log("It's a tie!");
@@ -64,5 +43,4 @@ function playRound(userSelection, computerSelection) {
   } else {
     console.log("something is wrong");
   }
-  //   console.log(userChoice + ", " + getComputerChoice());
 }
