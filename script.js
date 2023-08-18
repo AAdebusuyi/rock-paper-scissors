@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const winner = document.querySelector(".winner");
       winner.textContent = `Your Score is ${myScore}, You Win!`;
     } else if (computerScore >= 5) {
+      const winner = document.querySelector(".winner");
       winner.textContent = `Your Score is ${myScore}, You Lost lol!`;
     }
   }
