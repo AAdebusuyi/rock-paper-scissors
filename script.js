@@ -42,27 +42,43 @@ document.addEventListener("DOMContentLoaded", function () {
   function playRound(userSelection, computerSelection) {
     if (userSelection == computerSelection) {
       console.log("It's a tie!");
+      const roundResult = document.querySelector(".roundResult");
+      roundResult.textContent = "It's a tie!";
       myScore++;
       computerScore++;
     } else if (userSelection == "rock" && computerSelection == "scissors") {
+      const roundResult = document.querySelector(".roundResult");
+      roundResult.textContent = "You win! Rock smashes scissors.";
       console.log("You win! Rock smashes scissors.");
       myScore++;
     } else if (userSelection == "paper" && computerSelection == "rock") {
+      const roundResult = document.querySelector(".roundResult");
+      roundResult.textContent = "You win! Paper covers rock.";
       console.log("You win! Paper covers rock.");
       myScore++;
     } else if (userSelection == "scissors" && computerSelection == "paper") {
+      const roundResult = document.querySelector(".roundResult");
+      roundResult.textContent = "You win! Scissors dices paper.";
       console.log("You win! Scissors dices paper.");
       myScore++;
     } else if (userSelection == "scissors" && computerSelection == "rock") {
+      const roundResult = document.querySelector(".roundResult");
+      roundResult.textContent = "You lose! Rock smashes scissors.";
       console.log("You lose! Rock smashes scissors.");
       computerScore++;
     } else if (userSelection == "rock" && computerSelection == "paper") {
+      const roundResult = document.querySelector(".roundResult");
+      roundResult.textContent = "You lose! Paper covers rock.";
       console.log("You lose! Paper covers rock.");
       computerScore++;
     } else if (userSelection == "paper" && computerSelection == "scissors") {
+      const roundResult = document.querySelector(".roundResult");
+      roundResult.textContent = "You lose! Scissors dices paper.";
       console.log("You lose! Scissors dices paper.");
       computerScore++;
     } else {
+      const roundResult = document.querySelector(".roundResult");
+      roundResult.textContent = "something is wrong";
       console.log("something is wrong");
     }
 
@@ -75,10 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (myScore >= 5) {
       const winner = document.querySelector(".winner");
-      winner.textContent = `Your Score is ${myScore}, You Win!`;
+      winner.textContent = `Your Score is ${myScore}, You Win the game!`;
     } else if (computerScore >= 5) {
       const winner = document.querySelector(".winner");
-      winner.textContent = `Computer's Score is ${computerScore}, You Lost lol!`;
+      winner.textContent = `Computer's Score is ${computerScore}, You Lost the game lol!`;
     }
   }
 });
