@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (userSelection == computerSelection) {
       console.log("It's a tie!");
       myScore++;
-      computerScore;
+      computerScore++;
     } else if (userSelection == "rock" && computerSelection == "scissors") {
       console.log("You win! Rock smashes scissors.");
       myScore++;
