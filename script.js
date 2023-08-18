@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // get all the choices
+  // starting scores:
+  let myScore = 0;
+  let computerScore = 0;
 
+  // get all the choices
   const rockButton = document.querySelector(".rock");
   rockButton.addEventListener("click", () => {
     const userSelection = "rock";
@@ -27,11 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(computerSelection);
     playRound(userSelection, computerSelection);
   });
-
-  let myScore = 0;
-  let computerScore = 0;
-
-  //function to get user choice
 
   // function to get computer choice
   function getComputerChoice() {
@@ -64,6 +62,20 @@ document.addEventListener("DOMContentLoaded", function () {
       computerScore++;
     } else {
       console.log("something is wrong");
+    }
+
+    //scoring
+    const para1 = document.querySelector(".para1");
+    para1.textContent = `Your Score is ${myScore}`;
+
+    const para2 = document.querySelector(".para2");
+    para2.textContent = `Computer's Score is ${computerScore}`;
+
+    if (myScore >= 5) {
+      const winner = document.querySelector(".winner");
+      winner.textContent = `Your Score is ${myScore}, You Win!`;
+    } else if (computerScore >= 5) {
+      winner.textContent = `Your Score is ${myScore}, You Lost lol!`;
     }
   }
 });
