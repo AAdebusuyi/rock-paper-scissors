@@ -1,14 +1,24 @@
+// get all the choices
+
+const rockButton = document.querySelector(".rock");
+
+rockButton.addEventListener("click", () => {
+  computerSelection = getComputerChoice();
+  const playerSelection = "rock";
+  playRound(playerSelection, computerSelection);
+});
+
 let myScore = 0;
 let computerScore = 0;
 
-//loop for ten rounds in the game
-for (let i = 0; i < 10; i++) {
-  let userChoice = prompt("Enter a move: ").toLowerCase();
-  console.log("you played: " + userChoice);
-  playRound(userChoice, getComputerChoice());
-  console.log("You scored: " + myScore);
-  console.log("Computer scored: " + computerScore);
-}
+// //loop for ten rounds in the game
+// for (let i = 0; i < 10; i++) {
+//   // let userChoice = prompt("Enter a move: ").toLowerCase();
+//   console.log("you played: " + userChoice);
+//   playRound(userChoice, getComputerChoice());
+//   console.log("You scored: " + myScore);
+//   console.log("Computer scored: " + computerScore);
+// }
 
 // function to get computer choice
 function getComputerChoice() {
